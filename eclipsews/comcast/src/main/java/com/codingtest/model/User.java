@@ -3,6 +3,7 @@ package com.codingtest.model;
 public class User {
 	private String userName;
 	private String emailAddress;
+	//keeping it simple
 	private String dateRegistered;
 	
 	public User(String userName, String emailAddress, String dateRegistered){
