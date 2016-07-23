@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.codingtest.datastore.UserDB;
+import com.codingtest.datastore.UserRepository;
 import com.codingtest.exception.UserAlreadyExistsException;
 import com.codingtest.exception.UserDoesNotExistException;
 import com.codingtest.model.User;
@@ -14,7 +15,7 @@ public class UserDAO implements IUserDAO{
 
 	@Autowired
 	@Qualifier("userdb")
-	UserDB userDB;
+	UserRepository userDB;
 	
 	@Override
 	public User getUserByName(String name) throws UserDoesNotExistException{
